@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 
 app.post('/', (_, res) => {
-  exec(`cd "${process.argv.slice(2)}" && git pull && pm2 restart discord`)
+  exec(`cd "${process.argv.slice(2)}" && git pull && pm2 restart BigglesDevs-Bot`)
   res.sendStatus(200)
 })
 
