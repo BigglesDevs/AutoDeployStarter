@@ -3,11 +3,11 @@ const express = require('express')
 const app = express()
 
 app.post('/', (_, res) => {
-  exec(`cd "${process.argv.slice(2)}" && git pull && pm2 restart BigglesDevs-Bot`)
+  exec(`cd "${process.argv.slice(2)}" && git pull && pm2 restart BDSecurity`)
   res.sendStatus(200)
 })
 
-const port = process.env.PORT || 5074
+const port = process.env.PORT || 5075
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)
 })
